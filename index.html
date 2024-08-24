@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
-  <title>Game on Videojuegos</title>
+  <title>Game on Videojuegos</title> 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
   <style>
@@ -20,16 +20,18 @@
 <body id="fondo" background="img/background.png">
   <div class="login-container"> 
     <form class="d-flex" role="search" onsubmit="openRegistro(event)">
-      <button class="btn btn-outline-primary" type="submit">Mi Perfil</button>
+        <button class="btn btn-outline-primary" type="submit">Mi Perfil</button>
     </form>  
 </div>
+
 <!-- SCRIPT PARA ABRIR FORMULARIO DE REGISTRO EN OTRA PESTAÑA-->
-<script>
-function openRegistro(event) {
+  <script>
+    function openRegistro(event) {
     event.preventDefault(); // Evita que el formulario se envíe
     window.open('registro.html', '_blank'); // Abre la página en una nueva pestaña
-}
-</script>
+  }
+  </script>
+
     <br> 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
