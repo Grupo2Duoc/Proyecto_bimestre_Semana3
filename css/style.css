@@ -116,14 +116,16 @@ body {
 
 /* Estilo del Footer */
 .footer {
-    background-color: darkgray;
+    position:fixed;
+    bottom: 0px;
+    background-color: black;
     font-size: 10px;
-    height: 20px;
+    height: 30px;
     text-align: center;
-    padding: 5px;
-    color: #FFD700;
+    color: white;
     font-family: 'Arial', sans-serif;
     font-weight: bold;
+    width: 100%;
 }
 
 /* Ajustes del botón */
@@ -468,5 +470,21 @@ button.btn-secondary:hover {
         .info-personal .col-md-8 {
             border-bottom: 1px solid #dee2e6;
             padding-bottom: 8px;
+        }
+
+        .recovery-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 10cm; /* Ancho del contenedor */
+            margin: auto; /* Centrar horizontalmente */
+        }
+        .text-danger {
+            display: none; /* Ocultar inicialmente el mensaje de error */
+        }
+
+        .text-success {
+            display: none; /* Ocultar inicialmente el mensaje de éxito */
         }
 
