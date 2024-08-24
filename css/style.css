@@ -473,6 +473,7 @@ button.btn-secondary:hover {
         }
 
         .recovery-container {
+            color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
