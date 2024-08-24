@@ -1,5 +1,5 @@
-
-$(document).ready(function(){
+$(document).ready(function() {
+    // Código para el formulario de registro
     $('#formulario-registro').submit(function(event) {
         event.preventDefault();
         // Limpiar mensajes de error
@@ -10,7 +10,7 @@ $(document).ready(function(){
         $('#nomusuario-error').text('');                 
         $('#password-error').text('');
         $('#password2-error').text('');
-        $('#fecha-error').text('');  
+        $('#fecha-error').text('');
 
         // Validación del nombre, apellidos y nombre de usuario
         if($('#nombre').val() === '') {
@@ -42,7 +42,7 @@ $(document).ready(function(){
             $('#nomusuario-error').text('El nombre de usuario no puede quedar vacío');
             return;
         }
-        
+
         // Validación de contraseña
         const passwordValue = $('#password').val();
         const password2Value = $('#password2').val();
@@ -75,48 +75,31 @@ $(document).ready(function(){
         // Envío de formulario            
         this.submit();
     });
-});
 
-function limpiarCampos() {
-    // Restablecer el formulario a su estado original
-    $('#formulario-registro')[0].reset();
-
-    // Limpiar los mensajes de error
-    $('#nombre-error').text('');
-    $('#appaterno-error').text('');
-    $('#apmaterno-error').text('');
-    $('#nomusuario-error').text('');
-    $('#email-error').text('');
-    $('#fecha-error').text('');
-    $('#password-error').text('');
-    $('#password2-error').text('');
-}
-
-
-
-$(document).ready(function() {
-    $('#formulario-login').submit(function(event) {
-        event.preventDefault(); // Evita el envío del formulario
+    // Código para el formulario de recuperación de contraseña
+    document.getElementById('recovery-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evitar el envío del formulario por defecto
         
-        // Obtener los valores de los campos
-        var nombreUsuario = $('#username').val().trim();
-        var contraseña = $('#passwordLogin').val().trim();
-        
-        // Limpiar mensajes de error
-        $('#username-error').text('');
-        $('#password-error-login').text('');
+        // Obtener el valor del campo de correo
+        const emailInput = document.getElementById('email');
+        const emailValue = emailInput.value.trim();
+        const successMessage = document.getElementById('success-message');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Patrón regex para validar el formato del correo
+        const buttonErrorMessage = document.getElementById('button-error-message'); // Nuevo elemento para mostrar el error sobre el botón
 
-        // Comprobar si hay un nombre de usuario y contraseña
-        if (nombreUsuario === '' && contraseña === '') {
-            $('#username-error').text('Por favor ingresa tu nombre de usuario.');
-            $('#password-error-login').text('Falta la contraseña.');
-        } else if (nombreUsuario === '') {
-            $('#username-error').text('Debe ingresar un nombre de usuario o e-mail');
-        } else if (contraseña === '') {
-            $('#password-error-login').text('Debe ingresar una contraseña.');
+        // Limpiar mensajes anteriores
+        buttonErrorMessage.style.display = 'none'; // Ocultar mensaje de error sobre el botón
+        successMessage.style.display = 'none'; // Ocultar mensaje de éxito   
+        
+        // Validar el formato del correo electrónico
+        if (emailValue === "") {
+            buttonErrorMessage.textContent = "El correo es requerido"; // Mensaje para campo vacío
+            buttonErrorMessage.style.display = 'block'; // Mostrar mensaje de error    
+        } else if (!emailPattern.test(emailValue)) {
+            buttonErrorMessage.textContent = "Formato inválido."; // Mensaje para formato inválido
+            buttonErrorMessage.style.display = 'block'; // Mostrar mensaje de error    
         } else {
-            $('#username-error').text('Credenciales ingresadas con éxito.');                  
-            this.submit(); // Envía el formulario si los datos son válidos
+            successMessage.style.display = 'block'; // Mostrar mensaje de éxito
         }
     });
 });
