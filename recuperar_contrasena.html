@@ -72,10 +72,11 @@
       <div class="mb-3">
         <label for="email" class="form-label">Introduce tu correo electrónico</label>
         <input type="email" class="form-control" id="email" required>
-        <small class="text-danger" id="email-error">Correo inválido</small>
-        <small class="text-success" id="success-message">Enlace de recuperación enviado.</small>
+        <small class="text-success" id="success-message" style="display:none;">Enlace de recuperación enviado.</small> <!-- Mensaje de éxito -->
+        <!-- Mensaje de error visible sobre el botón que se mostrará cuando el correo sea inválido -->
+        <small class="text-danger" id="button-error-message" style="display:none;"></small>
       </div>
-      <button type="submit" class="btn btn-primary">Enviar enlace de recuperación</button>
+      <button type="submit" class="btn btn-primary">Enviar enlace de recuperación</button>    
     </form>
   </div>
   <script>
@@ -85,31 +86,25 @@
         // Obtener el valor del campo de correo
         const emailInput = document.getElementById('email');
         const emailValue = emailInput.value.trim();
-        const emailError = document.getElementById('email-error');
         const successMessage = document.getElementById('success-message');
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Patrón regex para validar el formato del correo
+        const buttonErrorMessage = document.getElementById('button-error-message'); // Nuevo elemento para mostrar el error sobre el botón
 
         // Limpiar mensajes anteriores
-        emailError.style.display = 'none'; // Ocultar mensaje de error
-        successMessage.style.display = 'none'; // Ocultar mensaje de éxito
-        emailInput.classList.remove('is-invalid'); // Quitar clase bootstrap para invalid
-
+        buttonErrorMessage.style.display = 'none'; // Ocultar mensaje de error sobre el botón
+        successMessage.style.display = 'none'; // Ocultar mensaje de éxito   
+        
         // Validar el formato del correo electrónico
         if (emailValue === "") {
-            emailError.textContent = "El correo es requerido."; // Mensaje de error para campo vacío
-            emailError.style.display = 'block'; // Mostrar mensaje de error
-            emailInput.classList.add('is-invalid'); // Agregar clase bootstrap para invalid
+            buttonErrorMessage.textContent = "El correo es requerido"; // Mensaje para campo vacío
+            buttonErrorMessage.style.display = 'block'; // Mostrar mensaje de error    
         } else if (!emailPattern.test(emailValue)) {
-            emailError.textContent = "Formato de correo inválido."; // Mensaje de error para formato inválido
-            emailError.style.display = 'block'; // Mostrar mensaje de error
-            emailInput.classList.add('is-invalid'); // Agregar clase bootstrap para invalid
+            buttonErrorMessage.textContent = "Formato inválido."; // Mensaje para formato inválido
+            buttonErrorMessage.style.display = 'block'; // Mostrar mensaje de error    
         } else {
             successMessage.style.display = 'block'; // Mostrar mensaje de éxito
-            // Aquí puedes continuar con el envío del formulario si es necesario
         }
     });
-</script>
-
-  
+  </script>  
 </body>
 </html>
