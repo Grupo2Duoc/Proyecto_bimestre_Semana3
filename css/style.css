@@ -116,14 +116,16 @@ body {
 
 /* Estilo del Footer */
 .footer {
-    background-color: darkgray;
+    position:fixed;
+    bottom: 0px;
+    background-color: black;
     font-size: 10px;
-    height: 20px;
+    height: 30px;
     text-align: center;
-    padding: 5px;
-    color: #FFD700;
+    color: white;
     font-family: 'Arial', sans-serif;
     font-weight: bold;
+    width: 100%;
 }
 
 /* Ajustes del botón */
