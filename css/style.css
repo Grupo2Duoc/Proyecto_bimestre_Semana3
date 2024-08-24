@@ -268,6 +268,14 @@ button.btn-secondary:hover {
     border-color: #7f93a5; /* Borde del botón Limpiar al pasar el mouse */
 }
 
+#formulario-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
 
 /* INICIO DE SESIÓN Y RECUPERACION DE CONTRASEÑA*/
 .navbar .form-control {
@@ -490,3 +498,7 @@ button.btn-secondary:hover {
             display: none; /* Ocultar inicialmente el mensaje de éxito */
         }
 
+.login-container {
+    display: flex;
+    align-items: center;
+}
