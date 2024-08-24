@@ -127,3 +127,20 @@ $(document).ready(function() {
         $(event.target).siblings('.carrito-mensaje').show(); // Muestra el mensaje correspondiente
     };
 });
+
+$(document).ready(function() {
+    $('#recovery-form').on('submit', function(e) {
+        e.preventDefault(); // Evita el envío del formulario por defecto
+
+        var email = $('#email').val();
+        if (email) {
+            // Simula el envío del enlace de recuperación
+            $('#success-message').show();
+            $('#button-error-message').hide();
+        } else {
+            $('#button-error-message').text('Por favor, introduce un correo válido.').show();
+            $('#success-message').hide();
+        }
+    });
+});
+
