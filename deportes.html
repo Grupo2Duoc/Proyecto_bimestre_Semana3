@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
   <title>Game on Categoria Deportes</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body id="fondo" background="img/background.png">
@@ -47,8 +48,12 @@
     </div>
   </nav>
   <br>
-  <div style="text-align:center">
-    <img id="banner" src="img/banner.png">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <img src="img/banner.png" class="card-img" alt="banner">
+      </div>
+    </div>
   </div>
   <br>
   <br>
@@ -56,15 +61,14 @@
     <h1 id="titulo-novedades">Juegos de Deportes</h1>
     <hr class="novedades-linea">
 
-  <!-- Desde aquí hacia arriba se debe mantener el diseño en todas las páginas -->  
+    <!-- Desde aquí hacia arriba se debe mantener el diseño en todas las páginas -->
     <div class="row">
       <!-- Tennis World Tour -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card h-100 text-center d-flex flex-column">
-          <img src="img/tennis.png" alt="Tennis World Tour" class="img-fluid"
-            style="object-fit: cover; height: 300px;">
+          <img src="img/tennis.png" alt="Tennis World Tour" class="img-fluid" style="object-fit: cover; height: 300px;">
           <div class="card-body d-flex flex-column">
-            <h2 class="card-title">Tennis World Tour</h2>            
+            <h2 class="card-title">Tennis World Tour</h2>
             <p class="card-text">
               Tennis World Tour te sumerge en la emoción del tenis profesional con una experiencia de juego
               intensa y realista. Compite contra los mejores jugadores del mundo en escenarios deslumbrantes y
@@ -81,10 +85,9 @@
       <!-- FIFA -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card h-100 text-center d-flex flex-column">
-          <img src="img/fifa.png" alt="FIFA" class="img-fluid"
-            style="object-fit: cover; height: 300px;">
+          <img src="img/fifa.png" alt="FIFA" class="img-fluid" style="object-fit: cover; height: 300px;">
           <div class="card-body d-flex flex-column">
-            <h2 class="card-title">FIFA</h2>            
+            <h2 class="card-title">FIFA</h2>
             <p class="card-text">
               FIFA te sumerge en el emocionante mundo del fútbol con una experiencia de juego vibrante y
               auténtica. Con gráficos impresionantes, jugabilidad realista y una amplia gama de equipos y ligas,
@@ -101,10 +104,9 @@
       <!-- NBA 2K24 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card h-100 text-center d-flex flex-column">
-          <img src="img/nba2k24.png" alt="NBA 2K24"
-            class="img-fluid" style="object-fit: cover; height: 300px;">
+          <img src="img/nba2k24.png" alt="NBA 2K24" class="img-fluid" style="object-fit: cover; height: 300px;">
           <div class="card-body d-flex flex-column">
-            <h2 class="card-title">NBA 2K24</h2>            
+            <h2 class="card-title">NBA 2K24</h2>
             <p class="card-text">
               NBA 2K24 te ofrece una experiencia de baloncesto envolvente con gráficos de última generación, jugabilidad
               realista y una amplia gama de modos de juego. Con equipos actualizados y una mecánica de juego mejorada,
@@ -120,10 +122,9 @@
       <!-- Madden NFL 24 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card h-100 text-center d-flex flex-column">
-          <img src="img/madden24.png" alt="Madden NFL 24"
-            class="img-fluid" style="object-fit: cover; height: 300px;">
+          <img src="img/madden24.png" alt="Madden NFL 24" class="img-fluid" style="object-fit: cover; height: 300px;">
           <div class="card-body d-flex flex-column">
-            <h2 class="card-title">Madden NFL 24</h2>            
+            <h2 class="card-title">Madden NFL 24</h2>
             <p class="card-text">
               Madden NFL 24 trae la emoción del fútbol americano a tu pantalla con un realismo impresionante y una
               jugabilidad dinámica. Experimenta la intensidad de la NFL con gráficos mejorados, jugadas estratégicas y
@@ -135,14 +136,15 @@
           </div>
         </div>
       </div>
-    </div> 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
 </body>
 <footer class="footer">
   <p>
     <center> Diseñado por Grupo 2 - Programación Web - Copyright 2024©</center>
   </p>
 </footer>
+
 </html>
