@@ -121,10 +121,3 @@ $(document).ready(function() {
     });
 });
 
-.formulario{
-    font-family: "Rubik Mono One", monospace;
-    font-weight: 400;
-    font-style: normal;
-    color: #f1f4f5;
-    background-color: #05089b;    
-}
