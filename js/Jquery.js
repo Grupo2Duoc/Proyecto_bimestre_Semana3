@@ -126,7 +126,9 @@ $(document).ready(function() {
         $('.carrito-mensaje').hide(); // Oculta cualquier mensaje que ya esté visible
         $(event.target).siblings('.carrito-mensaje').show(); // Muestra el mensaje correspondiente
     };
-});
+}); 
+
+//recuperación de formulario
 
 $(document).ready(function() {
     $('#recovery-form').on('submit', function(e) {
@@ -142,5 +144,7 @@ $(document).ready(function() {
             $('#success-message').hide();
         }
     });
+
+    
 });
 
